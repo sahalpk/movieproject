@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{movie.img.url}}" >
+    <div class="card-body">
+      <h5 class="card-title">{{ movie.name }}</h5>
+      <p class="card-text">{{movie.desc}}</p>
+      <p class="card-text">{{movie.year}}</p>
+      <a class="btn btn-warning" href=" {% url 'update' movie.id %}"> update</a>
+      <a class="btn btn-info" href=" {% url 'delete' movie.id %}"> delete</a>
+    </div>
+</div>
+{% endblock %}
+
+
